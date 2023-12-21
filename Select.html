@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://portal.aiub.edu/Student/Tpe/Select?teacherID=79704&sectionID=154711 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <meta name="viewport" content="width=device-width">
+    <title>Select</title>
+    <link href="./Select_files/student" rel="stylesheet">
+
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="aiub" class="ng-scope" data-new-gr-c-s-check-loaded="14.1139.0" data-gr-ext-installed="">
+    <script src="./Select_files/student(1)"></script>
+
+    
+    <div id="dvLoading">
+    </div>
+    <div id="backOpacity"></div>
+    <div class="container">
+        <br>
+        
+
+<div class="row ng-scope" ng-app="aiub" ng-controller="NotificationController" ng-init="init(&#39;/&#39;)" ng-click="DocumentClick()">
+    <div class="hidden-lg hidden-md" style="padding: 15px;">
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="topbar-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-00000000-0000-0000-0000-000000000000">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a id="navigation-toggler" class="navbar-brand logo" href="https://portal.aiub.edu/Student">
+                </a>
+
+            </div>
+            <ul class="nav navbar-nav hidden-md hidden-sm hidden-xs">
+                <li><a href="https://portal.aiub.edu/Student/Course?q=iBpjLWVwA0VqUfd1zzMKvKuQZ4HHzfR0RBG0enAqZLY%3D"><i class="glyphicon glyphicon-list" aria-hidden="true"></i>&nbsp;Courses &amp; Results</a></li>
+                <li><a href="https://portal.aiub.edu/Student/Registration?q=iBpjLWVwA0Vwz63h67B%2BnA%3D%3D"><i class="glyphicon glyphicon-flash" aria-hidden="true"></i>&nbsp;Registration</a></li>
+                <li><a href="https://portal.aiub.edu/Student/GradeReport/ByCurriculum?q=mxPlMMGCoVQ%3D"><i class="glyphicon glyphicon-certificate" aria-hidden="true"></i>&nbsp;Grade Report</a></li>
+            </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-00000000-0000-0000-0000-000000000000">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div id="noti_Counter" style="display: none;"></div> <!--SHOW NOTIFICATIONS COUNT.-->
+                        <!--A CIRCLE LIKE BUTTON TO DISPLAY NOTIFICATION DROPDOWN.-->
+                        <a href="https://portal.aiub.edu/Student/Tpe/Select?teacherID=79704&amp;sectionID=154711#" id="noti_Button">
+                            <div ng-click="SeeNotifications()">&nbsp;&nbsp;<span class="fa fa-bell"></span><span class="hidden-lg hidden-md hidden-sm">&nbsp;Notifications</span></div>
+                        </a>
+
+                        
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+                        <div id="notifications">
+                            <div style="width: 100%">
+                                <h3>
+                                    Notifications
+                                    <a href="https://portal.aiub.edu/Student/Tpe/Select?teacherID=79704&amp;sectionID=154711#" class="pull-right" ng-click="DocumentClick()">Close</a>
+                                </h3>
+                            </div>
+                            <div class="col-md-12" style="height: 300px; overflow-y: scroll">
+                                <div ng-show="Notifications.length==0" class="row ng-hide" style="margin: 5px; padding: 5px; background-color: lightblue; border-radius: 15px; color: #3b5998; text-align: center">
+                                    <b>Nothing to Show....</b>
+                                </div>
+                                <!-- ngRepeat: notification in Notifications -->
+                            </div>
+                            <div class="seeAll"><a href="https://portal.aiub.edu/Student/Tpe/Select?teacherID=79704&amp;sectionID=154711#" ng-click="GoToNotification1(&#39;/Student/Notification&#39;)">See All</a></div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://portal.aiub.edu/Student/Tpe/Select?teacherID=79704&amp;sectionID=154711#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="fa fa-cog"></span><span class="hidden-lg hidden-md hidden-sm">&nbsp;Settings</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow top"></div>
+                            <li><a href="https://portal.aiub.edu/Student/Credential/ChangePassword">Change Password</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://portal.aiub.edu/Login/Logout">
+                            <span class="fa fa-sign-out"></span><span class="hidden-lg hidden-md hidden-sm">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <p class="navbar-text navbar-right" style="padding-right: 10px;">Welcome <a href="https://portal.aiub.edu/Student/Home/Profile" class="navbar-link"><small>IMRAN, MD. SAIFUL</small></a></p>
+                    </li>
+                </ul>
+
+
+
+
+                
+
+
+
+
+
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+
+</div>
+
+<style>
+    /* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+    #noti_Button {
+        margin: 0px 0px 0px -8px;
+    }
+
+    /* THE POPULAR RED NOTIFICATIONS COUNTER. */
+    #noti_Counter {
+        display: block;
+        position: absolute;
+        background: #E1141E;
+        color: #FFF;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 1px 3px;
+        margin: -8px 0 0 25px;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        z-index: 1;
+    }
+
+
+    /* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
+    #notifications {
+        display: none;
+        width: 430px;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background: #FFF;
+        border: solid 1px rgba(100, 100, 100, .20);
+        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .20);
+        z-index: 9000;
+    }
+
+
+
+    @media (max-width: 770px) {
+
+        #noti_Counter {
+            display: block;
+            position: absolute;
+            background: #E1141E;
+            color: #FFF;
+            font-size: 12px;
+            font-weight: normal;
+            padding: 1px 3px;
+            margin: -25px 0 0 25px;
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            z-index: 1;
+        }
+
+        #notifications {
+            display: block;
+            width: 300px;
+            position: sticky;
+            top: 35px;
+            right: 10px;
+            background: #FFF;
+            border: solid 1px rgba(100, 100, 100, .20);
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .20);
+            z-index: 9000;
+        }
+    }
+
+    /* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+    /*#notifications:before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            color: transparent;
+            border: 10px solid #CCC;
+            border-color: transparent transparent #FFF;
+            margin-top: -20px;
+            margin-left: 10px;
+        }*/
+
+    h3 {
+        display: block;
+        color: #333;
+        background: #FFF;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 8px;
+        margin: 0;
+        border-bottom: solid 1px rgba(100, 100, 100, .30);
+    }
+
+    .seeAll {
+        background: #F6F7F8;
+        padding: 8px;
+        font-size: 12px;
+        font-weight: bold;
+        border-top: solid 1px rgba(100, 100, 100, .30);
+        text-align: center;
+    }
+
+        .seeAll a {
+            color: #3b5998;
+        }
+
+            .seeAll a:hover {
+                background: #F6F7F8;
+                color: #3b5998;
+                text-decoration: underline;
+            }
+</style>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $('#noti_Button').click(function () {
+            return false;
+        });
+
+        $('#notifications').click(function () {
+            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+        });
+    });
+</script>
+
+        <div class="portal-body">
+            
+<fieldset>
+    <legend>Teachers Performance Evaluation - Questionnaires
+    </legend>
+    
+
+<form action="https://portal.aiub.edu/Student/Tpe/Select?sectionID=154711&amp;teacherID=79704" method="post" novalidate="novalidate" class="ng-pristine ng-valid">        <table class="table table-bordered">
+            <tbody><tr>
+                <td>Next Teacher:</td>
+                <td>PRODIP KUMAR GHOSE</td>
+                <td>Next Section:</td>
+                <td>COMPLEX VARIABLE,LAPLACE &amp; Z-TRANSFORMATION [V]</td>
+            </tr>
+        </tbody></table>
+        <ul>
+                <li>
+                    <h4>A. KNOWLEDGE OF THE SUBJECT MATTER</h4>
+                    <ul>
+
+                            <li>
+(1)<label for="Questions_0__Rating">Shows intellectual grasp of the subject matter consistent with the course outline or syllabus.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_0__ID" name="Questions[0].ID" type="hidden" value="25">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_0__Rating" name="Questions[0].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_0__Rating" name="Questions[0].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_0__Rating" name="Questions[0].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_0__Rating" name="Questions[0].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_0__Rating" name="Questions[0].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[0].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(2)<label for="Questions_1__Rating">Relates subject matter to actual life experiences by providing examples, illustrations.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_1__ID" name="Questions[1].ID" type="hidden" value="26">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_1__Rating" name="Questions[1].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_1__Rating" name="Questions[1].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_1__Rating" name="Questions[1].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_1__Rating" name="Questions[1].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_1__Rating" name="Questions[1].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[1].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(3)<label for="Questions_2__Rating">Plans and organizes the lectures, discussions properly, logically with the help of instructional tools such as: multi-media, white board, OHP, etc.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_2__ID" name="Questions[2].ID" type="hidden" value="27">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_2__Rating" name="Questions[2].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_2__Rating" name="Questions[2].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_2__Rating" name="Questions[2].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_2__Rating" name="Questions[2].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_2__Rating" name="Questions[2].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[2].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(4)<label for="Questions_3__Rating">Asks thought provoking questions which allow students to think critically and express ideas clearly with confidence.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_3__ID" name="Questions[3].ID" type="hidden" value="28">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_3__Rating" name="Questions[3].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_3__Rating" name="Questions[3].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_3__Rating" name="Questions[3].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_3__Rating" name="Questions[3].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_3__Rating" name="Questions[3].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[3].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+
+
+                    </ul>
+                    <br>
+                    <br>
+                </li>
+                <li>
+                    <h4>B. INSTRUCTIONAL STRATEGIES AND MOTIVATION TECHNIQUES</h4>
+                    <ul>
+
+                            <li>
+(1)<label for="Questions_4__Rating">Applies different approaches, styles and techniques in teaching and evaluating students’ performance.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_4__ID" name="Questions[4].ID" type="hidden" value="29">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_4__Rating" name="Questions[4].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_4__Rating" name="Questions[4].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_4__Rating" name="Questions[4].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_4__Rating" name="Questions[4].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_4__Rating" name="Questions[4].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[4].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(2)<label for="Questions_5__Rating">Shows ability to manage classroom situation such as: discipline of students, proper decorum and orderliness in the classroom.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_5__ID" name="Questions[5].ID" type="hidden" value="30">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_5__Rating" name="Questions[5].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_5__Rating" name="Questions[5].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_5__Rating" name="Questions[5].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_5__Rating" name="Questions[5].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_5__Rating" name="Questions[5].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[5].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(3)<label for="Questions_6__Rating">Provides additional information to support and enrich students presentations and discussions.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_6__ID" name="Questions[6].ID" type="hidden" value="31">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_6__Rating" name="Questions[6].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_6__Rating" name="Questions[6].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_6__Rating" name="Questions[6].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_6__Rating" name="Questions[6].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_6__Rating" name="Questions[6].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[6].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(4)<label for="Questions_7__Rating">Encourages students to ask questions, clarifications on the topic being discussed and acknowledges students good responses and participation.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_7__ID" name="Questions[7].ID" type="hidden" value="32">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_7__Rating" name="Questions[7].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_7__Rating" name="Questions[7].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_7__Rating" name="Questions[7].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_7__Rating" name="Questions[7].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_7__Rating" name="Questions[7].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[7].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+
+
+                    </ul>
+                    <br>
+                    <br>
+                </li>
+                <li>
+                    <h4>C. PERSONALITY TRAITS</h4>
+                    <ul>
+
+                            <li>
+(1)<label for="Questions_8__Rating">Shows self-confidence, tact, patience and proper behavior in dealing  with the students inside and outside of the classroom.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_8__ID" name="Questions[8].ID" type="hidden" value="33">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_8__Rating" name="Questions[8].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_8__Rating" name="Questions[8].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_8__Rating" name="Questions[8].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_8__Rating" name="Questions[8].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_8__Rating" name="Questions[8].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[8].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(2)<label for="Questions_9__Rating">Possesses pleasing personality, good grooming and properly dressed.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_9__ID" name="Questions[9].ID" type="hidden" value="34">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_9__Rating" name="Questions[9].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_9__Rating" name="Questions[9].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_9__Rating" name="Questions[9].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_9__Rating" name="Questions[9].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_9__Rating" name="Questions[9].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[9].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(3)<label for="Questions_10__Rating">Shows interest and dedication to teaching</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_10__ID" name="Questions[10].ID" type="hidden" value="35">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_10__Rating" name="Questions[10].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_10__Rating" name="Questions[10].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_10__Rating" name="Questions[10].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_10__Rating" name="Questions[10].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_10__Rating" name="Questions[10].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[10].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(4)<label for="Questions_11__Rating">Good command of the English language and uses it as a medium of instruction</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_11__ID" name="Questions[11].ID" type="hidden" value="36">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_11__Rating" name="Questions[11].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_11__Rating" name="Questions[11].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_11__Rating" name="Questions[11].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_11__Rating" name="Questions[11].Rating" type="radio" value="2">
+                                            Least Agrer
+                                        </li>
+                                        <li>
+                                            <input id="Questions_11__Rating" name="Questions[11].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[11].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+
+
+                    </ul>
+                    <br>
+                    <br>
+                </li>
+                <li>
+                    <h4>D. STUDENT-FACULTY RELATION</h4>
+                    <ul>
+
+                            <li>
+(1)<label for="Questions_12__Rating">Maintains mutual respect between the teacher and students and among students.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_12__ID" name="Questions[12].ID" type="hidden" value="37">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_12__Rating" name="Questions[12].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_12__Rating" name="Questions[12].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_12__Rating" name="Questions[12].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_12__Rating" name="Questions[12].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_12__Rating" name="Questions[12].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[12].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(2)<label for="Questions_13__Rating">Provides conducive classroom atmosphere and opportunities for students to spontaneously and effectively interact with each other.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_13__ID" name="Questions[13].ID" type="hidden" value="38">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_13__Rating" name="Questions[13].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_13__Rating" name="Questions[13].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_13__Rating" name="Questions[13].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_13__Rating" name="Questions[13].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_13__Rating" name="Questions[13].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[13].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(3)<label for="Questions_14__Rating">Demonstrates concerns and welfare of students through appropriate counseling and assistance in their studies.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_14__ID" name="Questions[14].ID" type="hidden" value="39">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_14__Rating" name="Questions[14].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_14__Rating" name="Questions[14].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_14__Rating" name="Questions[14].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_14__Rating" name="Questions[14].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_14__Rating" name="Questions[14].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[14].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(4)<label for="Questions_15__Rating">Practices fairness, objectivity and rationale in taking actions for and against the students.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_15__ID" name="Questions[15].ID" type="hidden" value="40">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_15__Rating" name="Questions[15].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_15__Rating" name="Questions[15].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_15__Rating" name="Questions[15].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_15__Rating" name="Questions[15].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_15__Rating" name="Questions[15].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[15].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+
+
+                    </ul>
+                    <br>
+                    <br>
+                </li>
+                <li>
+                    <h4>E. ROUTINE MATTERS</h4>
+                    <ul>
+
+                            <li>
+(1)<label for="Questions_16__Rating">Regularly check attendance of students</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_16__ID" name="Questions[16].ID" type="hidden" value="41">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_16__Rating" name="Questions[16].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_16__Rating" name="Questions[16].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_16__Rating" name="Questions[16].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_16__Rating" name="Questions[16].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_16__Rating" name="Questions[16].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[16].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(2)<label for="Questions_17__Rating">Punctual in reporting to the class</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_17__ID" name="Questions[17].ID" type="hidden" value="42">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_17__Rating" name="Questions[17].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_17__Rating" name="Questions[17].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_17__Rating" name="Questions[17].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_17__Rating" name="Questions[17].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_17__Rating" name="Questions[17].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[17].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(3)<label for="Questions_18__Rating">Uploads lecture notes, assignments, case studies, exercises in the website</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_18__ID" name="Questions[18].ID" type="hidden" value="43">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_18__Rating" name="Questions[18].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_18__Rating" name="Questions[18].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_18__Rating" name="Questions[18].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_18__Rating" name="Questions[18].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_18__Rating" name="Questions[18].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[18].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+                            <li>
+(4)<label for="Questions_19__Rating">Policies, grading system, procedures are clearly explained and complied with by both the students and teacher.</label><input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="Questions_19__ID" name="Questions[19].ID" type="hidden" value="44">
+                                <ul>
+                                        <li>
+                                            <input data-val="true" data-val-number="The field Rating must be a number." data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="** Please select an answer." id="Questions_19__Rating" name="Questions[19].Rating" type="radio" value="5">
+                                            Strongly Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_19__Rating" name="Questions[19].Rating" type="radio" value="4">
+                                            Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_19__Rating" name="Questions[19].Rating" type="radio" value="3">
+                                            Moderately Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_19__Rating" name="Questions[19].Rating" type="radio" value="2">
+                                            Least Agree
+                                        </li>
+                                        <li>
+                                            <input id="Questions_19__Rating" name="Questions[19].Rating" type="radio" value="1">
+                                            Disagree
+                                        </li>
+                                </ul>
+                                <span class="field-validation-valid" data-valmsg-for="Questions[19].Rating" data-valmsg-replace="true"></span>
+                                <br>
+                            </li>
+
+
+                    </ul>
+                    <br>
+                    <br>
+                </li>
+        </ul>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="Comment">Comment</label>
+                <textarea class="form-control" cols="10" data-val="true" data-val-required="** Please enter comment." id="Comment" name="Comment" rows="6"></textarea>
+                <span class="field-validation-valid" data-valmsg-for="Comment" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Submit" class="btn btn-danger">
+        </div>
+        <br>
+</form> 
+</fieldset>
+
+        </div>
+        
+    </div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
